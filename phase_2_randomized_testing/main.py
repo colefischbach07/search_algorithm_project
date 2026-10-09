@@ -8,6 +8,8 @@ from algorithms import (
 
 
 def run_random_test():
+
+
     values = [random.randint(1, 100) for _ in range(20)]
     values.sort()
 
@@ -28,6 +30,7 @@ def run_random_test():
         ("Recursive Binary Search", recursive_index),
         ("Iterative Binary Search", iterative_index),
         ("Sequential Search", sequential_index),
+
     ]
 
     print("\nSorted List:", values)
@@ -43,8 +46,10 @@ def run_random_test():
             print(f"{algorithm_name}: Not Found")
 
 
+
 def main():
-    for _ in range(10):
+    for trial in range(1, 11):
+        print(f"\n===== Trial {trial} ===== " )
         run_random_test()
 
 
